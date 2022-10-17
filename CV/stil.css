@@ -1,0 +1,89 @@
+*{      /* Selectam toate etichetele din pagina */ 
+    box-sizing: border-box;   /*  pentru calculul continut + pading+border+margini */
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin:0; 
+    display: flex;     /*se va reflecta aranjamentul in elementele copil  */
+    flex-direction: row;   /*afisam elementele pe randuri (orizontala*/
+    flex-wrap:wrap; /* realizeaza trecerea elementelor pe mai multe randuri*/
+
+}
+.container-stanga {
+    width:30%;
+    background-color:cadetblue;
+    padding:30px;
+    border-right:2px solid rgb(69, 63, 123);   /*2px grosimea, solid: tipul  ultima:culoarea */
+}
+
+.container-dreapta {
+    width:70%;
+    padding: 30px;
+}
+.imagine-persoana {
+    border-radius:50%;
+    border:2px solid cadetblue;
+    display: block; /* se intinde pe tot width-ul disponibil*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px;
+    margin-bottom: 30px;  /*scris mai simplu: margin:30px auto; ( sus jos stanga dr auto) */
+
+}
+
+h1{
+    color: rgb(69, 63, 123) ;
+    text-transform:uppercase;
+}
+
+H3{
+border-bottom: 2px solid rgb(69, 63, 123);
+
+}
+
+ul{
+    padding-left: 30px;
+}
+
+h4, p {    /*  selectez toate h4 si toate p... se pune virgula intre ele */
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.buton-mai-mult {
+    font-weight: bold;
+    display: inline-block;  /* avem nevoie de display sa umblam la padding/margin */
+    padding:5px;
+    border-left: 1px solid black; 
+    border-bottom: 1px solid black ;
+
+    cursor: pointer;
+
+}
+
+.sectiune{
+margin-top:10px;
+margin-bottom:20px;
+
+}
+
+.element-ascuns{
+    display:none;
+    
+}
+
+/* Responsivness-- la sfarsitul fisierului css*/
+
+@media screen  and (max-width:769px) {  /* intervalul 0 - 769px*/
+    .container-stanga{
+        width:100%;
+        border-right:none;  /* stergem vordura din dreapta */
+        border-bottom:  2px rgb(69, 63, 123);
+    }
+
+    .container-dreapta{
+        width:100%;
+    }
+
+    
+}
